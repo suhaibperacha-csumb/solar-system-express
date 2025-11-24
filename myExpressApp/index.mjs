@@ -26,24 +26,37 @@ app.get('/', async (req, res) => {
 app.get('/mercury', (req, res) => {
   res.render('planet', { info: planets.getMercury(), name: "Mercury" });
 });
+
 app.get('/venus', (req, res) => {
   res.render('planet', { info: planets.getVenus(), name: "Venus" });
 });
+
 app.get('/earth', (req, res) => {
   res.render('planet', { info: planets.getEarth(), name: "Earth" });
 });
+
+/* FIXED MARS IMAGE */
 app.get('/mars', (req, res) => {
-  res.render('planet', { info: planets.getMars(), name: "Mars" });
+  let info = planets.getMars();
+  info.image = "https://solarsystem.nasa.gov/system/feature_items/images/603_mars.jpg";
+  res.render('planet', { info, name: "Mars" });
 });
+
+/* FIXED JUPITER IMAGE */
 app.get('/jupiter', (req, res) => {
-  res.render('planet', { info: planets.getJupiter(), name: "Jupiter" });
+  let info = planets.getJupiter();
+  info.image = "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png";
+  res.render('planet', { info, name: "Jupiter" });
 });
+
 app.get('/saturn', (req, res) => {
   res.render('planet', { info: planets.getSaturn(), name: "Saturn" });
 });
+
 app.get('/uranus', (req, res) => {
   res.render('planet', { info: planets.getUranus(), name: "Uranus" });
 });
+
 app.get('/neptune', (req, res) => {
   res.render('planet', { info: planets.getNeptune(), name: "Neptune" });
 });
