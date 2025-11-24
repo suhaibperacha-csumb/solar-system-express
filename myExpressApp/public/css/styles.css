@@ -1,0 +1,24 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+img {
+  margin-top: 20px;
+}
+
+.container {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 40px;
+  border: 1px solid rgba(255,255,255,0.2);
+}

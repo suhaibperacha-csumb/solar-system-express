@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head.ejs') %>
+
+<body>
+  <h1><%= name %></h1>
+
+  <%- include('partials/nav.ejs') %>
+
+  <h2>Description</h2>
+  <p><%= info.description %></p>
+
+  <h2>Moons</h2>
+  <p><%= info.moons %></p>
+
+  <img src="<%= info.image %>" style="width:350px;">
+
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>
