@@ -37,9 +37,10 @@ app.get('/earth', (req, res) => {
 
 app.get('/mars', (req, res) => {
   let mars = planets.getMars();
-  console.log("MARS DATA:", mars);
+  mars.image = "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg";
   res.render('planet', { info: mars, name: "Mars" });
 });
+
 
 app.get('/jupiter', (req, res) => {
   let info = planets.getJupiter();
