@@ -35,14 +35,15 @@ app.get('/earth', (req, res) => {
   res.render('planet', { info: planets.getEarth(), name: "Earth" });
 });
 
-/* FIXED MARS IMAGE */
 app.get('/mars', (req, res) => {
-  let info = planets.getMars();
-  info.image = "https://solarsystem.nasa.gov/system/feature_items/images/603_mars.jpg";
-  res.render('planet', { info, name: "Mars" });
+  let mars = planets.getMars();
+
+  mars.image = "https://mars.nasa.gov/system/resources/detail_files/25068_1-PIA25835-web.jpg";
+  mars.img = mars.image;
+
+  res.render('planet', { info: mars, name: "Mars" });
 });
 
-/* FIXED JUPITER IMAGE */
 app.get('/jupiter', (req, res) => {
   let info = planets.getJupiter();
   info.image = "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png";
