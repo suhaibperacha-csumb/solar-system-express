@@ -37,10 +37,7 @@ app.get('/earth', (req, res) => {
 
 app.get('/mars', (req, res) => {
   let mars = planets.getMars();
-
-  mars.image = "https://mars.nasa.gov/system/resources/detail_files/25068_1-PIA25835-web.jpg";
-  mars.img = mars.image;
-
+  console.log("MARS DATA:", mars);
   res.render('planet', { info: mars, name: "Mars" });
 });
 
